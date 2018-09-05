@@ -42,7 +42,7 @@ int main(int argc,char** argv)
 	{
 		AES_encrypt(plain_data,encrypt_data,&key);
 		fwrite(encrypt_data,1,16,fp_encrypt);
-	//	file_size += ret;
+		if(ret < 16) break;
 	}
 	
 	fwrite(&ret,1,1,fp_encrypt);

@@ -33,7 +33,7 @@ int main(int argc,char** argv)
 	AES_KEY key;
 
 	strcpy(user_key,argv[3]);	
-	AES_set_encrypt_key(user_key,128,&key);	
+	AES_set_decrypt_key(user_key,128,&key);	
 
 	fp_encrypt = fopen(argv[1],"rb");
 	fp_plain = fopen(argv[2],"wb");
